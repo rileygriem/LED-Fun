@@ -1,10 +1,11 @@
 #include <Adafruit_NeoPixel.h>
 
-#define LED_PIN 6      // Define the pin where the data line is connected
+#define LED_PIN_LOWER 2      // Define the pin where the data line is connected
+#define LED_PIN_UPPER 2
 #define NUM_LEDS 120   // Total number of LEDs per line
 
-Adafruit_NeoPixel strip1 = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
-Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip1 = Adafruit_NeoPixel(NUM_LEDS, LED_PIN_LOWER, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(NUM_LEDS, LED_PIN_UPPER, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   strip1.begin();
